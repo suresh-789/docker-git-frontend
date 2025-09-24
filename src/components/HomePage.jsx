@@ -31,9 +31,24 @@ const HomePage = () => {
 
   return (
     <div className="container">
-      {/* Header */}
-      <div className="header">
-        <h1>E-Commerce</h1>
+      {/* Modern Header with all navigation */}
+      <header className="header modern-header">
+        <div className="logo-title">
+          <Link to="/home" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none', color: 'inherit' }}>
+            <span className="logo">🛒</span>
+            <h1 style={{ margin: 0 }}>E-Shop</h1>
+          </Link>
+        </div>
+        <nav className="main-nav">
+          <Link to="/home">Home</Link>
+          <Link to="/about-us">About Us</Link>
+          <Link to="/computers">Computers</Link>
+          <Link to="/mobiles">Mobiles</Link>
+          <Link to="/laptops">Laptops</Link>
+          <Link to="/pendrives">Pendrives</Link>
+          {isAuthenticated && <Link to="/cart">Cart</Link>}
+          {isAuthenticated && <Link to="/orders">Orders</Link>}
+        </nav>
         <div className="header-right">
           {isAuthenticated ? (
             <div className="profile-menu">
@@ -44,49 +59,28 @@ const HomePage = () => {
               />
               {dropdownOpen && (
                 <div className="dropdown">
-                  <Link to="/cart" onClick={() => setDropdownOpen(false)}>Cart</Link>
-                  <Link to="/orders" onClick={() => setDropdownOpen(false)}>Orders</Link>
                   <button onClick={handleLogout}>Logout</button>
                 </div>
               )}
             </div>
           ) : (
-            <>
+            <div className="auth-buttons">
               <Link to="/login"><button>Login</button></Link>
               <Link to="/signup"><button>Sign Up</button></Link>
-            </>
+            </div>
           )}
         </div>
-      </div>
-
-      {/* Sidebar */}
-      <div className="sidebar">
-        <ul>
-          <li>
-            <Link to="/about-us">About Us</Link>
-          </li>
-          <li>
-            <Link to="/computers">Computers</Link>
-          </li>
-          <li>
-            <Link to={isAuthenticated ? "/mobiles" : "/login"}>Mobiles</Link>
-          </li>
-          <li>
-            <Link to={isAuthenticated ? "/laptops" : "/login"}>Laptops</Link>
-          </li>
-          <li>
-            <Link to={isAuthenticated ? "/pendrives" : "/login"}>Pendrives</Link>
-          </li>
-        </ul>
-      </div>
+      </header>
 
       {/* Main Content */}
-      <div className="main">
+      <main className="main modern-main">
         <Outlet />
-      </div>
+      </main>
 
-      {/* Footer */}
-      <div className="footer">@ copyright E-Commerce</div>
+      {/* Modern Footer */}
+      <footer className="footer modern-footer">
+        <span>© {new Date().getFullYear()} E-Shop. All rights reserved.</span>
+      </footer>
     </div>
   );
 };

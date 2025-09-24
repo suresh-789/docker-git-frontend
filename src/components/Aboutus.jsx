@@ -12,34 +12,33 @@ const AboutUs = () => {
       </p>
 
       <div className="about-grid">
-      <Link to="/computers">
-        <div className="about-item">        
-          <img src="computers.jpeg" alt="Computers" />
-          <h3>Computers</h3>
-          <p>Find the best computers for gaming, work, and personal use.</p>
-        </div>
+        <Link to="/computers">
+          <div className="about-item">
+            <img src="/computers-new.jpg" alt="Computers (public/computers-new.jpg)" />
+            <h3>Computers</h3>
+            <p>Find the best computers for gaming, work, and personal use.</p>
+          </div>
         </Link>
-
         <Link to="/mobiles">
-        <div className="about-item">
-          <img src="mobiles.jpeg" alt="Mobiles" />
-          <h3>Mobiles</h3>
-          <p>Latest smartphones from top brands at unbeatable prices.</p>
-        </div>
+          <div className="about-item">
+            <img src="/mobiles-new.jpg" alt="Mobiles (public/mobiles-new.jpg)" />
+            <h3>Mobiles</h3>
+            <p>Latest smartphones from top brands at unbeatable prices.</p>
+          </div>
         </Link>
         <Link to="/laptops">
-        <div className="about-item">
-          <img src="laptops.jpeg" alt="Laptops" />
-          <h3>Laptops</h3>
-          <p>Powerful laptops for professionals, students, and gamers.</p>
-        </div>
+          <div className="about-item">
+            <img src="/laptops-new.jpg" alt="Laptops (public/laptops-new.jpg)" />
+            <h3>Laptops</h3>
+            <p>Powerful laptops for professionals, students, and gamers.</p>
+          </div>
         </Link>
         <Link to="/pendrives">
-        <div className="about-item">
-          <img src="accessories.jpg" alt="Accessories" />
-          <h3>Accessories</h3>
-          <p>Find the best accessories like pendrives, keyboards, and more.</p>
-        </div>
+          <div className="about-item">
+            <img src="/pendrives-new.jpg" alt="Pendrives (public/pendrives-new.jpg)" />
+            <h3>Pendrives</h3>
+            <p>Fast and reliable storage solutions.</p>
+          </div>
         </Link>
       </div>
     </div>
